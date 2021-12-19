@@ -1,0 +1,6 @@
+#!/bin/bash#!/bin/bash
+
+CONFIG_FILE_NAME=".vimrc"
+CONFIG_FOLDER_NAME="vim"
+
+. $MAC_CONFIG_HOME/general-config $CONFIG_FOLDER_NAME $CONFIG_FILE_NAME
