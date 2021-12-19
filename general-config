@@ -1,0 +1,21 @@
+#!/bin/bash#!/bin/bash
+
+CONFIG_FOLDER_NAME="$1"
+CONFIG_FILE_NAME="$2"
+
+if [ -f $HOME/$CONFIG_FILE_NAME ]; then
+  DIFF=$(diff $HOME/$CONFIG_FILE_NAME $MAC_CONFIG_HOME/$CONFIG_FOLDER_NAME/$CONFIG_FILE_NAME)
+  echo "$CONFIG_FILE_NAME found"
+
+  if [[ "$DIFF" != "" ]]; then
+    echo "Files are different. Removing"
+    rm $HOME/$CONFIG_FILE_NAME
+  else 
+    echo "No difference between files. Nothing will be done."
+  fi
+
+fi
+
+if [ ! -f $HOME/$CONFIG_FILE_NAME ]; then 
+  ln -s $MAC_CONFIG_HOME/$CONFIG_FOLDER_NAME/$CONFIG_FILE_NAME $HOME/$CONFIG_FILE_NAME && echo "Linking new $CONFIG_FILE_NAME"
+fi

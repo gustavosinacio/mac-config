@@ -1,0 +1,6 @@
+#!/bin/bash
+
+CONFIG_FILE_NAME=".zshrc"
+CONFIG_FOLDER_NAME="zsh"
+
+. $MAC_CONFIG_HOME/general-config $CONFIG_FOLDER_NAME $CONFIG_FILE_NAME

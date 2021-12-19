@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export MAC_CONFIG_HOME=$HOME/mac-config
+
+cd $MAC_CONFIG_HOME
+
+# git pull
+
+./gitconfig/config
+./zsh/config
+./profile/config
