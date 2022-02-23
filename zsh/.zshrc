@@ -121,3 +121,10 @@ source $(brew --prefix nvm)/nvm.sh
 export NVM_COLORS='rcgWy'
 
 fpath=($fpath "/Users/$USER/.zfunctions")
+
+prompt_context() {
+    # Custom (Random emoji)
+    emojis=("⚡️" "🔥" "💀" "👑" "😎" "🐸" "🐵" "🍻" "🚀" "💡" "🔑" "🚦" "🕸")
+    RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
+    prompt_segment black default "${emojis[$RAND_EMOJI_N]} "
+}
