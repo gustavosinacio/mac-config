@@ -4,3 +4,17 @@ CONFIG_FILE_NAME=".zshrc"
 CONFIG_FOLDER_NAME="zsh"
 
 . $MAC_CONFIG_HOME/general-config $CONFIG_FOLDER_NAME $CONFIG_FILE_NAME
+
+# Install zsh-autosuggestions
+# From: https://github.com/zsh-users/zsh-autosuggestions
+# Configuration: https://github.com/zsh-users/zsh-autosuggestions#configuration
+# ------------------------------------------------------------------------------
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# Install zsh-syntax-highlighting
+# Configuration: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters.md
+# ------------------------------------------------------------------------------
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# Install zsh-completions
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
