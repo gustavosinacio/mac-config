@@ -11,15 +11,15 @@ leftover_idle=$(top -l 2 -s 0w| grep -E "^CPU" | tail -1 | awk '{ print 100 - $7
 
 # echo -e "\e[92m$cpu_percent"
 echo -en "\033[1;36m"
-# printf "%0.1f\n" "$(bc -q <<< scale=3\;"$cpu_percent")"
 printf "$cpu_percent%"
+echo -en "\033[0m"
+echo " | ansi=true font='fira code' trim=false size=12";
 
-echo -e "\033[0m"
-echo " | ansi=true font='fira code' trim=false";
 echo "---"
 
 echo -en "\033[1;31m$leftover_idle -> from idle\033[0m"
 echo " | ansi=true font='fira code' trim=false";
 
 echo "---"
+
 echo "Refresh | refresh=true"
