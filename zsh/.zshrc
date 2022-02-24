@@ -86,7 +86,7 @@ SPACESHIP_CHAR_SYMBOL=">:"
 SPACESHIP_CHAR_SUFFIX=" "
 
 # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="bg=#222"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffe135,bg=#222"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -124,7 +124,7 @@ fpath=($fpath "/Users/$USER/.zfunctions")
 
 prompt_context() {
     # Custom (Random emoji)
-    emojis=("⚡️" "🔥" "💀" "👑" "😎" "🐸" "🐵" "🍻" "🚀" "💡" "🔑" "🚦" "🕸")
+    emojis=("⚡️" "🔥" "💀" "👑" "😎" "🍻" "🚀" "💡" "🔑" "🕸")
     RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
     prompt_segment black default "${emojis[$RAND_EMOJI_N]} "
 }
