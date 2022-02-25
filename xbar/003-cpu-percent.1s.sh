@@ -10,7 +10,7 @@ cpu_percent=$(top -F -R -o cpu -l 2 -s 1 | grep -E "^CPU" | tail -1 | awk '{ pri
 leftover_idle=$(top -l 2 -s 0 | grep -E "^CPU" | tail -1 | awk '{ print 100 - $7"%" }')
 
 # echo -e "\e[92m$cpu_percent"
-echo -en "\033[1;36m"
+echo -en "\033[1;32m"
 printf "$cpu_percent%"
 echo -en "\033[0m"
 echo " | ansi=true font='fira code' trim=false size=12";
