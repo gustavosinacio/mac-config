@@ -31,6 +31,7 @@ PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export git=$HOME/github
 export GIT=$HOME/github
 export MAC_CONFIG_HOME=$HOME/mac-config
+export XBAR_PLUGINS="$HOME/Library/Application Support/xbar/plugins/"
 
 [ -f ~/.local_profile ] && source ~/.local_profile
 # [ -f $LINUX_CONFIG_HOME/aliases ] && source $LINUX_CONFIG_HOME/aliases
