@@ -5,7 +5,7 @@ import subprocess
 
 battery = int(subprocess.getoutput(
     "pmset -g batt | grep -Eo \"\\d+%\" | cut -d% -f1"))
-config = " | size=12 font='fira code'"
+config = " | size=12 font='quicksand'"
 color = ''
 
 green = "\033[1;32m"
@@ -22,21 +22,14 @@ white = "\033[1;37m"
 
 if battery >= 50:
     color = green
-elif battery < 50 or battery >= 30:
+elif battery < 50 and battery >= 15:
     color = yellow
 else:
     color = red
 
-print("{}{}%{}{}".format(battery, color, reset, config))
+print("{}{}%{}{}".format(color, battery,  reset, config))
 
 print("---")
-print("{}{}%{}{}".format(black, battery, reset, config))
-print("{}{}%{}{}".format(red, battery, reset, config))
-print("{}{}%{}{}".format(green, battery, reset, config))
-print("{}{}%{}{}".format(yellow, battery, reset, config))
 print("{}{}%{}{}".format(blue, battery, reset, config))
-print("{}{}%{}{}".format(magenta, battery, reset, config))
-print("{}{}%{}{}".format(cyan, battery, reset, config))
-print("{}{}%{}{}".format(white, battery, reset, config))
-print("{}{}%{}{}".format(reset, battery, reset, config))
-print("--menu? {}{}%{}{}".format("\033[1;31m", battery, reset, config))
+print("--submenu {}{}%{}{}".format(white, battery, reset, config))
+print("----subsubmenu {}{}%{}{}".format(white, battery, reset, config))
