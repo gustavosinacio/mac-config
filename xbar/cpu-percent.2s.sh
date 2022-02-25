@@ -6,8 +6,8 @@
 # <xbar.author.github>gustavosinacio</xbar.author.github>
 # <xbar.desc>Displays cpu usage</xbar.desc>
 
-cpu_percent=$(top -l 2 -s 0| grep -E "^CPU" | tail -1 | awk '{ print $3 + $5"%" }')
-leftover_idle=$(top -l 2 -s 0w| grep -E "^CPU" | tail -1 | awk '{ print 100 - $7"%" }')
+cpu_percent=$(top -F -R -o cpu -l 2 -s 1 | grep -E "^CPU" | tail -1 | awk '{ print $3 + $5"%" }')
+leftover_idle=$(top -l 2 -s 0 | grep -E "^CPU" | tail -1 | awk '{ print 100 - $7"%" }')
 
 # echo -e "\e[92m$cpu_percent"
 echo -en "\033[1;36m"
