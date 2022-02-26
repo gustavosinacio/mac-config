@@ -10,3 +10,5 @@ git pull origin master
 ./zsh/config
 ./profile/config
 ./vim/config
+
+./install-nvm
