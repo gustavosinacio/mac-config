@@ -41,7 +41,7 @@ function print_ifstat {
     kbits_out=$(echo "$1" | awk '{ print $2 }')
     mbits_in=$(kilo_to_mega "$kbits_in")
     mbits_out=$(kilo_to_mega "$kbits_out")
-    echo -e "\033[1;32m▼\033[0m $mbits_in • $mbits_out \033[1;33m▲\033[0m| size=12"
+    echo -e "\033[1;32m▼\033[0m $mbits_in • $mbits_out \033[1;33m▲\033[0m | size=14"
 
 }
 
