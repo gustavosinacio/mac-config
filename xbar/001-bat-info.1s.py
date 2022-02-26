@@ -19,6 +19,9 @@ adapter = subprocess.getoutput(
     "pmset -g adapter"
 ).splitlines()
 
+cycleCount = str(subprocess.getoutput(
+    "ioreg -l | grep CycleCount | tail -1 | cut -d \"=\" -f2 | xargs"
+)).strip()
 
 config = " | size=14 font='quicksand'"
 color = ''
@@ -44,7 +47,7 @@ if(charging == "charging"):
     color = green
 
 
-resultBatteryString = ""
+resultBatteryString = "↺{} ".format(cycleCount)
 resultBatteryString += color
 resultBatteryString += charginSymbol + " "
 resultBatteryString += str(battery) + "%"
