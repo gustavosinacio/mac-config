@@ -29,4 +29,4 @@ stringfiedCpuPercent = str(int(cpuPercent)).rjust(2)
 
 config = " | ansi=true font='fira code' trim=false size=14"
 
-print("{} 💻{}%{}{}".format(color, stringfiedCpuPercent, reset, config))
+print("{}💻{}%{}{}".format(color, stringfiedCpuPercent, reset, config))
