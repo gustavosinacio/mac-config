@@ -20,8 +20,9 @@ adapter = subprocess.getoutput(
 ).splitlines()
 
 
-config = " | size=12 font='quicksand'"
+config = " | size=14 font='quicksand'"
 color = ''
+
 
 white = "\033[1;37m"
 green = "\033[1;32m"
@@ -29,10 +30,6 @@ yellow = "\033[1;33m"
 red = "\033[1;31m"
 reset = "\033[0m"
 
-# black = "\033[1;30m"
-# blue = "\033[1;34m"
-# magenta = "\033[1;35m"
-# cyan = "\033[1;36m"
 
 if battery >= 50:
     color = white
@@ -51,7 +48,6 @@ resultBatteryString = ""
 resultBatteryString += color
 resultBatteryString += charginSymbol + " "
 resultBatteryString += str(battery) + "%"
-resultBatteryString += " " + charginSymbol
 resultBatteryString += reset
 resultBatteryString += config
 # Return on the top bar here ---------------------------------------------------
