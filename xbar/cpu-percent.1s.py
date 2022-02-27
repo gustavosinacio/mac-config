@@ -13,9 +13,10 @@ green = "\033[1;32m"
 yellow = "\033[1;33m"
 red = "\033[1;31m"
 reset = "\033[0m"
+config = " | ansi=true font='fira code' trim=false size=14"
 
 cpuPercent = float(subprocess.getoutput(
-    "top -F -R -o cpu -l 2 -s 1 | grep -E \"^CPU\" | tail -1 | awk '{ print $3 + $5 }'"
+    "top -F -R -o cpu -l 1 -s 1 -n 0 | grep -E \"^CPU\" | tail -1 | awk '{ print $3 + $5 }'"
 ))
 
 if cpuPercent <= 30:
@@ -26,7 +27,5 @@ else:
     color = red
 
 stringfiedCpuPercent = str(int(cpuPercent)).rjust(2)
-
-config = " | ansi=true font='fira code' trim=false size=14"
 
 print("{}💻{}%{}{}".format(color, stringfiedCpuPercent, reset, config))
