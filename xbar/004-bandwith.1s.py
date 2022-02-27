@@ -12,17 +12,17 @@ for info in bandwithLine.split(" "):
         stripedInfo.append(info)
 
 download = float(stripedInfo[0])
-downloadSuffix = "kb"
+downloadSuffix = ""
 upload = float(stripedInfo[1])
-uploadSuffix = "kb"
+uploadSuffix = ""
 
 if(download >= 1000):
     download /= 1000
-    downloadSuffix = "mb"
+    downloadSuffix = "m"
 
 if(upload >= 1000):
     upload /= 1000
-    uploadSuffix = "mb"
+    uploadSuffix = "m"
 
 download = "{:.1f}".format(download).rjust(7)
 upload = "{:.1f}".format(upload).rjust(7)
