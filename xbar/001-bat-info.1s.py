@@ -24,7 +24,6 @@ cycleCount = str(subprocess.getoutput(
 )).strip()
 
 config = " | size=14 font='quicksand'"
-color = ''
 
 
 white = "\033[1;37m"
@@ -32,13 +31,12 @@ green = "\033[1;32m"
 yellow = "\033[1;33m"
 red = "\033[1;31m"
 reset = "\033[0m"
+color = white
 
 
-if battery >= 50:
-    color = white
-elif battery < 50 and battery >= 15:
+if battery < 30 and battery >= 15:
     color = yellow
-else:
+elif battery < 15:
     color = red
 
 charginSymbol = ""
@@ -58,6 +56,7 @@ print(resultBatteryString)
 # ------------------------------------------------------------------------------
 print("---")
 
+print(charging)
 print("therm")
 for line in therms:
     print("--{}".format(line))
