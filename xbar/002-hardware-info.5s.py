@@ -35,7 +35,7 @@ white = "\033[1;37m"
 yellow = "\033[1;33m"
 red = "\033[1;31m"
 reset = "\033[0m"
-config = " | ansi=true font='fira code' trim=false size=14 | templateImage={BUILTIN_GPU_ICON}"
+config = " | ansi=true font='fira code' trim=true size=14 | templateImage={BUILTIN_GPU_ICON}"
 
 
 topReturn = str(subprocess.getoutput(
@@ -74,5 +74,6 @@ print("{}{}%{}{}| templateImage={}".format(
 # print('{}'.format(stringfiedCpuPercent))
 # print('{}'.format(topReturn))
 print('---')
+print('Activity Monitor | shell="sh" param1="$MAC_CONFIG_HOME/scripts/open-activity-monitor.sh" terminal=true')
 for each in top:
     print(each + ': ', top[each])

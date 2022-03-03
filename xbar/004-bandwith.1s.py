@@ -24,8 +24,8 @@ if(upload >= 1000):
     upload /= 1000
     uploadSuffix = "m"
 
-download = "{:.1f}".format(download).rjust(7)
-upload = "{:.1f}".format(upload).rjust(7)
+download = "{:.1f}".format(download).rjust(6)
+upload = "{:.1f}".format(upload).rjust(6)
 
-print("\033[1;32m▼\033[0m {}{} º {}{} \033[1;33m▲\033[0m | {}".format(
+print("{}{} \033[1;32m▼\033[0m {}{} \033[1;33m▲\033[0m | {}".format(
     download, downloadSuffix, upload, uploadSuffix, config))

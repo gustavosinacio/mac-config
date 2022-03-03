@@ -1,6 +1,5 @@
 #!/opt/homebrew/bin/python3
 
-import os
 import subprocess
 
 battery = int(subprocess.getoutput(
