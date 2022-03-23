@@ -22,6 +22,7 @@ fi
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 [ -f $HOME/github/bash-commands ] && PATH="$HOME/github/bash-commands:$PATH"
 [ -f $HOME/.local-commands ] && PATH="$HOME/.local-commands:$PATH"
+[ -f $HOME/mac-config/xbar ] && PATH="$HOME/mac-config/xbar"
 
 # export ANDROID_HOME=~/Android/Sdk
 # export PATH=$PATH:$ANDROID_HOME/emulator

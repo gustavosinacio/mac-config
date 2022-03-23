@@ -71,8 +71,6 @@ stringfiedCpuPercent = str(int(cpuPercent)).rjust(2)
 print("{}{}%{}{}| templateImage={}".format(
     color, stringfiedCpuPercent, reset, config, BUILTIN_GPU_ICON))
 
-# print('{}'.format(stringfiedCpuPercent))
-# print('{}'.format(topReturn))
 print('---')
 print('Activity Monitor | shell="sh" param1="$MAC_CONFIG_HOME/scripts/open-activity-monitor.sh" terminal=true')
 for each in top:
