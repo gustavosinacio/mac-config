@@ -20,9 +20,9 @@ fi
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-[ -f $HOME/github/bash-commands ] && PATH="$HOME/github/bash-commands:$PATH"
-[ -f $HOME/.local-commands ] && PATH="$HOME/.local-commands:$PATH"
-[ -f $HOME/mac-config/xbar ] && PATH="$HOME/mac-config/xbar"
+[ -d $HOME/github/bash-commands ] && PATH="$HOME/github/bash-commands:$PATH" || echo 'No bash-commands'
+[ -d $HOME/.local-commands ] && PATH="$HOME/.local-commands:$PATH" || echo 'No local commands'
+[ -d $HOME/mac-config/xbar ] && PATH="$HOME/mac-config/xbar:$PATH" || echo 'No xbar'
 
 # export ANDROID_HOME=~/Android/Sdk
 # export PATH=$PATH:$ANDROID_HOME/emulator
