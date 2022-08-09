@@ -47,13 +47,14 @@ if(charging == "charging"):
 resultBatteryString = "↺{} ".format(cycleCount)
 resultBatteryString += color
 resultBatteryString += charginSymbol + " "
-resultBatteryString += str(battery) + "%"
 resultBatteryString += reset
 resultBatteryString += config
 # Return on the top bar here ---------------------------------------------------
 print(resultBatteryString)
 # ------------------------------------------------------------------------------
 print("---")
+
+print("current charge: " + str(battery) + "%")
 
 print(charging)
 print("therm")

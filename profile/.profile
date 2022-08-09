@@ -18,21 +18,27 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# set PATH so it includes user's private bin directories
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-[ -d $HOME/github/bash-commands ] && PATH="$HOME/github/bash-commands:$PATH" || echo 'No bash-commands'
-[ -d $HOME/.local-commands ] && PATH="$HOME/.local-commands:$PATH" || echo 'No local commands'
-[ -d $HOME/mac-config/xbar ] && PATH="$HOME/mac-config/xbar:$PATH" || echo 'No xbar'
-
-# export ANDROID_HOME=~/Android/Sdk
-# export PATH=$PATH:$ANDROID_HOME/emulator
-# export PATH=$PATH:$ANDROID_HOME/tools
-# export PATH=$PATH:$ANDROID_HOME/platform-tools
-
 export git=$HOME/github
 export GIT=$HOME/github
 export MAC_CONFIG_HOME=$HOME/mac-config
 export XBAR_PLUGINS="$HOME/Library/Application Support/xbar/plugins/"
 
-[ -f ~/.local_profile ] && source ~/.local_profile
-# [ -f $LINUX_CONFIG_HOME/aliases ] && source $LINUX_CONFIG_HOME/aliases
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+
+# set PATH so it includes user's private bin directories
+PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+
+# these are configured by me to be universal
+# If they exist in the computer, them i want them in my PATH
+[ -d $HOME/github/bash-commands ] && PATH="$HOME/github/bash-commands:$PATH" || echo 'No bash-commands'
+[ -d $HOME/mac-config/xbar ] && PATH="$HOME/mac-config/xbar:$PATH" || echo 'No xbar'
+
+# Aliases call
+[ -f $MAC_CONFIG_HOME/aliases/aliases ] && source $MAC_CONFIG_HOME/aliases/aliases || echo 'No mac config aliases'
+
+# Source local files, if each is found
+[ -f ~/.local_aliases ] && source ~/.local_aliases || echo "No local aliases"
+[ -f ~/.local_profile ] && source ~/.local_profile || echo "No local profile"
+[ -f $HOME/.local-commands ] && PATH="$HOME/.local-commands:$PATH" || echo 'No local commands'
