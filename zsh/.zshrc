@@ -1,8 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-[ -f ~/.profile ] && source ~/.profile
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR=vim
@@ -128,3 +126,7 @@ prompt_context() {
     RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
     prompt_segment black default "${emojis[$RAND_EMOJI_N]} "
 }
+
+[ -f ~/.profile ] && source ~/.profile
+
+eval "$(rbenv init - zsh)"
