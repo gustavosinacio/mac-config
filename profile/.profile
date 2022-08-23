@@ -29,16 +29,21 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+found=""
+missing=""
 
 # these are configured by me to be universal
 # If they exist in the computer, them i want them in my PATH
-[ -d $HOME/github/bash-commands ] && PATH="$HOME/github/bash-commands:$PATH" || echo 'No bash-commands'
-[ -d $HOME/mac-config/xbar ] && PATH="$HOME/mac-config/xbar:$PATH" || echo 'No xbar'
+[ -d $HOME/github/bash-commands ] && PATH="$HOME/github/bash-commands:$PATH" && found="✅ bash-commands\n" || missing="$missing ❌ bash-commands\n"
+[ -d $HOME/mac-config/xbar ] && PATH="$HOME/mac-config/xbar:$PATH" && found="$found\n ✅ xbar\n" || missing="$missing ❌ xbar\n"
 
 # Aliases call
-[ -f $MAC_CONFIG_HOME/aliases/aliases ] && source $MAC_CONFIG_HOME/aliases/aliases || echo 'No mac config aliases'
+[ -f $MAC_CONFIG_HOME/aliases/aliases ] && source $MAC_CONFIG_HOME/aliases/aliases && found="$found ✅ aliases\n" || missing="$missing ❌ mac config aliases\n"
 
 # Source local files, if each is found
-[ -f ~/.local_aliases ] && source ~/.local_aliases || echo "No local aliases"
-[ -f ~/.local_profile ] && source ~/.local_profile || echo "No local profile"
-[ -f $HOME/.local-commands ] && PATH="$HOME/.local-commands:$PATH" || echo 'No local commands'
+[ -f ~/.local_aliases ] && source ~/.local_aliases && found="$found ✅ local_aliases\n" || missing="$missing ❌ local_aliases\n"
+[ -f ~/.local_profile ] && source ~/.local_profile && found="$found ✅ local_profile\n" || missing="$missing ❌ local_profile\n"
+[ -f $HOME/.local-commands ] && PATH="$HOME/.local-commands:$PATH" && found="$found ✅ local-commands\n" || missing="$missing ❌ local-commands\n"
+
+echo $found
+echo $missing

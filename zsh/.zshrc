@@ -127,6 +127,6 @@ prompt_context() {
     prompt_segment black default "${emojis[$RAND_EMOJI_N]} "
 }
 
-[ -f ~/.profile ] && source ~/.profile
+[ -f ~/.profile ] && source ~/.profile || echo " ❌ profile"
 
 eval "$(rbenv init - zsh)"
