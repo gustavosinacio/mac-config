@@ -125,6 +125,7 @@ prompt_context() {
     emojis=("⚡️" "🔥" "💀" "👑" "😎" "🍻" "🚀" "💡" "🔑" "🕸")
     RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
     prompt_segment black default "${emojis[$RAND_EMOJI_N]} "
+    prompt_segment green black "$(arch)"
 }
 
 [ -f ~/.profile ] && source ~/.profile || echo " ❌ profile"

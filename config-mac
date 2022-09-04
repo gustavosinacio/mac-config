@@ -11,4 +11,8 @@ git pull origin master
 ./profile/config
 ./vim/config
 
-./install-nvm
+sh ./packages/install-nvm
+sh ./packages/install-firacode
+sh ./packages/install-exa
+sh ./packages/install-fzf
+sh ./packages/install-yarn
