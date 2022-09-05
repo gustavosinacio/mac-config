@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# From Rosetta Terminal (tick checkbox in Terminal right click menu -> Get Info -> Open using Rosetta)
+# To verify you are running in Rosetta run:
+
+arch
+# -> i386
+
+# Install node
+nvm install lts/gallium
+
+# Verify node installation
+nvm use lts/gallium
+
+node -e 'console.log(process.arch)'
+# -> x64

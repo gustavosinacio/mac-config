@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# From native Terminal
+# To verify you are running natively:
+
+arch
+# -> arm64
+
+# Install node
+nvm install stable
+
+# Verify node installation
+nvm use stable
+
+node -e 'console.log(process.arch)'
+# -> arm64

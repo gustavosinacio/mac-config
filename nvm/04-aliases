@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# To make DX a bit better you can alias your installations:
+nvm alias arm stable
+# arm -> stable (-> v15.6.0)
+nvm alias intel lts/fermium
+# intel -> lts/fermium (-> v14.15.4)
+
+# To test aliases:
+nvm use arm
+# Now using node v15.6.0 (npm v7.4.0)
+node -e 'console.log(process.arch)'
+# -> arm64
+
+nvm use intel
+# Now using node v14.15.4 (npm v6.14.10)
+node -e 'console.log(process.arch)'
+# -> x64
