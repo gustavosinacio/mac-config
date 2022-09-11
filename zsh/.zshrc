@@ -8,8 +8,12 @@ export EDITOR=vim
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
 
+# This next line enables spaceship theme
+# if using it, disable the ZSH_THEME line above
+source "/opt/homebrew/opt/spaceship/spaceship.zsh"
+source "$HOME/.config/spaceship/spaceship.zsh"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -79,9 +83,6 @@ plugins=(
     zsh-completions
 )
 
-SPACESHIP_PROMPT_ADD_NEWLINE="false"
-SPACESHIP_CHAR_SYMBOL=">:"
-SPACESHIP_CHAR_SUFFIX=" "
 
 # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffe135,bg=#222"
@@ -114,8 +115,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 export NVM_COLORS='rcgWy'
 
 fpath=($fpath "/Users/$USER/.zfunctions")
@@ -131,3 +134,9 @@ prompt_context() {
 [ -f ~/.profile ] && source ~/.profile || echo " ❌ profile"
 
 eval "$(rbenv init - zsh)"
+
+
+# Node installed from brew config
+export LDFLAGS="-L/usr/local/opt/node@16/lib"
+export CPPFLAGS="-I/usr/local/opt/node@16/include"
+export PATH="/usr/local/opt/node@16/bin:$PATH"
