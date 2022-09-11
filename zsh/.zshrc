@@ -4,6 +4,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR=vim
+
+# ------------------------------------------------------------------------------
+# THEME CONFIG -----------------------------------------------------------------
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -13,13 +17,16 @@ export EDITOR=vim
 # This next line enables spaceship theme
 # if using it, disable the ZSH_THEME line above
 source "/opt/homebrew/opt/spaceship/spaceship.zsh"
-source "$HOME/.config/spaceship/spaceship.zsh"
+source "$HOME/.spaceship.zsh"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
-ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" "spaceship")
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" "spaceship" )
 
+# THEME CONFIG -----------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -115,14 +122,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-export NVM_COLORS='rcgWy'
-
-fpath=($fpath "/Users/$USER/.zfunctions")
-
+# Agnoster theme prompt config 
 prompt_context() {
     # Custom (Random emoji)
     emojis=("⚡️" "🔥" "💀" "👑" "😎" "🍻" "🚀" "💡" "🔑" "🕸")
@@ -130,6 +130,14 @@ prompt_context() {
     prompt_segment black default "${emojis[$RAND_EMOJI_N]} "
     prompt_segment green black "$(arch)"
 }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+export NVM_COLORS='rcgWy'
+
+fpath=($fpath "/Users/$USER/.zfunctions")
 
 [ -f ~/.profile ] && source ~/.profile || echo " ❌ profile"
 

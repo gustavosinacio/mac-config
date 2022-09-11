@@ -1,20 +1,27 @@
 #!/bin/bash
 
-# integrate
+# Brews ------------------------------------------------------------------------
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 alias mbrew='arch -arm64 /opt/homebrew/bin/brew'
 
+# Files, finder ----------------------------------------------------------------
 alias ls='exa'
 alias ll='exa --long --header --git --icons'
 alias la='exa --long --header --git --icons --all'
 
 alias weather='curl -4 wttr.in/brasilia'
 
+# Github -----------------------------------------------------------------------
 alias ghcpr="GH_FORCE_TTY=100% gh pr list | fzf --preview 'GH_FORCE_TTY=100% gh pr view {1}' --preview-window down --ansi --header-lines 3 | awk '{print $1}' | xargs gh pr checkout"
 
+
+# Architectures ----------------------------------------------------------------
 alias intel="/usr/bin/arch -x86_64 /bin/zsh"
 alias arm="/usr/bin/arch -arm64 /bin/zsh"
 
 alias testnode="node -e \"console.log(process.arch)\""
 
 alias android-build="npx react-native run-android --variant=stagingDebug --no-jetifier"
+
+# Configs ----------------------------------------------------------------------
+zshconfig="code ~/.zshrc"
