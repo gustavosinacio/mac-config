@@ -6,6 +6,10 @@
 	<string>echo"Customcommand"&amp;</string>
 	<key>Default Bookmark Guid</key>
 	<string>FC244426-86FF-4B10-B91E-6DA6303081B4</string>
+	<key>DimBackgroundWindows</key>
+	<false/>
+	<key>DimOnlyText</key>
+	<true/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
 	<key>DoubleClickPerformsSmartSelection</key>
@@ -406,7 +410,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>No</string>
+			<string>Recycle</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -1075,6 +1079,8 @@
 	<true/>
 	<key>SoundForEsc</key>
 	<false/>
+	<key>SplitPaneDimmingAmount</key>
+	<real>0.5043014259708738</real>
 	<key>StatusBarPosition</key>
 	<integer>0</integer>
 	<key>TabStyleWithAutomaticOption</key>
