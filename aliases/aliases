@@ -24,4 +24,4 @@ alias testnode="node -e \"console.log(process.arch)\""
 alias android-build="npx react-native run-android --variant=stagingDebug --no-jetifier"
 
 # Configs ----------------------------------------------------------------------
-zshconfig="code ~/.zshrc"
+alias zshconfig="code ~/.zshrc"

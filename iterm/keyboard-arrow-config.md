@@ -1,6 +1,6 @@
 Open Iterm
 Preferences > Keys (or Preferences > Profiles > Keys)
-Click the plus.
+Go to "Key Mappings tab" Click the plus.
 
 move forward one word
 
