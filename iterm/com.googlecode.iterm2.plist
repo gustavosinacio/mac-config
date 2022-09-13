@@ -183,30 +183,42 @@ Clear Buffer</string>
 			</dict>
 			<key>Ansi 10 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.3333333432674408</real>
+				<real>0.29899981963983024</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
 				<real>1</real>
 				<key>Red Component</key>
-				<real>0.3333333432674408</real>
+				<real>0.2601318359375</real>
 			</dict>
 			<key>Ansi 11 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.3333333432674408</real>
+				<real>0.051850609481334686</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.87594477609958765</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.892822265625</real>
 			</dict>
 			<key>Ansi 12 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
 				<real>1</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.3333333432674408</real>
+				<real>0.87542879767715931</real>
 				<key>Red Component</key>
-				<real>0.3333333432674408</real>
+				<real>0.098907470703125</real>
 			</dict>
 			<key>Ansi 13 Color</key>
 			<dict>
@@ -383,13 +395,13 @@ Clear Buffer</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>1</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.49907900393009186</real>
 				<key>Red Component</key>
-				<real>0.00497436711201793</real>
+				<real>0.22314453125</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
@@ -807,6 +819,8 @@ Clear Buffer</string>
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
+			<key>Minimum Contrast</key>
+			<real>0.0</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
