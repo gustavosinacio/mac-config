@@ -25,3 +25,11 @@ alias android-build="npx react-native run-android --variant=stagingDebug --no-je
 
 # Configs ----------------------------------------------------------------------
 alias zshconfig="code ~/.zshrc"
+
+# Docker -----------------------------------------------------------------------
+alias docker-ip="docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
+alias dps="docker ps"
+alias dpsa="docker ps -a"
+alias dcd="docker-compose down"
+alias dcu="docker-compose up"
+alias dcuf="docker-compose up --force-recreate"

@@ -8,6 +8,7 @@
   co = checkout
   cm = checkout master
   cb = checkout -b
+  sr = reset --soft HEAD~1
   st = status -sb
   sf = show --name-only
   lg = log --pretty=format:'%Cred%h%Creset %C(bold)%cr%Creset %Cgreen<%an>%Creset %s' --max-count=30
@@ -15,6 +16,4 @@
   outgoing = !(git fetch --quiet && git log --pretty=format:'%C(yellow)%h %C(white)- %C(red)%an %C(white)- %C(cyan)%d%Creset %s %C(white)- %ar%Creset' @{u}..)
   unstage = reset HEAD --
   undo = checkout --
-  rollback = reset --soft HEAD~1
   logp = !git --no-pager log -n 20 --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-  echo = status
