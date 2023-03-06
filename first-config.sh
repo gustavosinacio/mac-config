@@ -10,10 +10,6 @@ git pull origin master
 ./zsh/config
 ./profile/config
 ./vim/config
+./spaceship/config
 
-sh ./nvm/01-install-nvm
-
-sh ./packages/install-firacode
-sh ./packages/install-exa
-sh ./packages/install-fzf
-sh ./packages/install-yarn
+sh ./install-packages.sh
