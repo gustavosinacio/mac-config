@@ -11,5 +11,6 @@ git pull origin master
 ./profile/config
 ./vim/config
 ./spaceship/config
+./iterm/config
 
 sh ./install-packages.sh
