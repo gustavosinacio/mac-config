@@ -18,6 +18,8 @@ alias ibrew='arch -x86_64 /usr/local/bin/brew'
 alias mbrew='arch -arm64 /opt/homebrew/bin/brew'
 
 alias testnode="node -e \"console.log(process.arch)\""
+alias creat-intel-node="ln -s $(which node) /usr/local/bin/node"
+alias creat-arm-node="ln -s $(which node) /opt/homebrew/bin/node"
 
 alias android-build="npx react-native run-android --variant=stagingDebug --no-jetifier"
 
@@ -33,5 +35,4 @@ alias dcu="docker-compose up"
 alias dcuf="docker-compose up --force-recreate"
 
 # Watchman ----
-
 alias watchman-res= "watchman watch-del $(pwd); watchman watch-project $(pwd)"
