@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Brews ------------------------------------------------------------------------
-alias ibrew='arch -x86_64 /usr/local/bin/brew'
-alias mbrew='arch -arm64 /opt/homebrew/bin/brew'
-
 # Files, finder ----------------------------------------------------------------
 alias ls='exa'
 alias ll='exa --long --header --git --icons'
@@ -14,10 +10,12 @@ alias weather='curl -4 wttr.in/brasilia'
 # Github -----------------------------------------------------------------------
 alias ghcpr="GH_FORCE_TTY=100% gh pr list | fzf --preview 'GH_FORCE_TTY=100% gh pr view {1}' --preview-window down --ansi --header-lines 3 | awk '{print $1}' | xargs gh pr checkout"
 
-
 # Architectures ----------------------------------------------------------------
 alias intel="/usr/bin/arch -x86_64 /bin/zsh"
 alias arm="/usr/bin/arch -arm64 /bin/zsh"
+alias ipod='/usr/local/bin/pod'
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
+alias mbrew='arch -arm64 /opt/homebrew/bin/brew'
 
 alias testnode="node -e \"console.log(process.arch)\""
 
@@ -33,3 +31,7 @@ alias dpsa="docker ps -a"
 alias dcd="docker-compose down"
 alias dcu="docker-compose up"
 alias dcuf="docker-compose up --force-recreate"
+
+# Watchman ----
+
+alias watchman-res= "watchman watch-del $(pwd); watchman watch-project $(pwd)"

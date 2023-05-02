@@ -14,7 +14,7 @@
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
+        . "$HOME/.bashrc"
     fi
 fi
 
@@ -43,7 +43,6 @@ missing=""
 # Source local files, if each is found
 [ -f ~/.local_aliases ] && source ~/.local_aliases && found="$found ✅ local_aliases\n" || missing="$missing ❌ local_aliases\n"
 [ -f ~/.local_profile ] && source ~/.local_profile && found="$found ✅ local_profile\n" || missing="$missing ❌ local_profile\n"
-[ -f $HOME/.local-commands ] && PATH="$HOME/.local-commands:$PATH" && found="$found ✅ local-commands\n" || missing="$missing ❌ local-commands\n"
+[ -f $HOME/.local-commands ] && PATH="$HOME/.local-commands:$PATH" && found="$found ✅ local-commands\n" || missing="$missing ❌ local-commands"
 
-echo $found
-echo $missing
+export customFiles=$found$missing
