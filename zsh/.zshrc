@@ -81,7 +81,7 @@ source "$HOME/.spaceship.zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( 
+plugins=(
     git
     vscode
     yarn
@@ -89,7 +89,6 @@ plugins=(
     zsh-syntax-highlighting
     zsh-completions
 )
-
 
 # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffe135,bg=#222"
@@ -122,18 +121,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Agnoster theme prompt config 
+# Agnoster theme prompt config
 prompt_context() {
     # Custom (Random emoji)
     emojis=("⚡️" "🔥" "💀" "👑" "😎" "🍻" "🚀" "💡" "🔑" "🕸")
-    RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
+    RAND_EMOJI_N=$(($RANDOM % ${#emojis[@]} + 1))
     prompt_segment black default "${emojis[$RAND_EMOJI_N]} "
     prompt_segment green black "$(arch)"
 }
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export NVM_COLORS='rcgWy'
 
@@ -142,7 +137,6 @@ fpath=($fpath "/Users/$USER/.zfunctions")
 [ -f ~/.profile ] && source ~/.profile || echo " ❌ profile"
 
 eval "$(rbenv init - zsh)"
-
 
 # Node installed from brew config
 export LDFLAGS="-L/usr/local/opt/node@16/lib"

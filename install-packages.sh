@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Install brew
+./brew/install
+
 sh ./nvm/01-install-nvm
 
 sh ./packages/install-firacode
