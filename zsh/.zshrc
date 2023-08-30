@@ -19,9 +19,8 @@ export EDITOR=vim
 
 CPU="$(sysctl -n machdep.cpu.brand_string | grep Intel)"
 
-echo $CPU
 if [[ $CPU == *"Intel"* ]]; then
-    echo "Intel"
+    echo "\x1b[32mIntel"
     source "/usr/local/opt/spaceship/spaceship.zsh"
 else
     echo "M1"
