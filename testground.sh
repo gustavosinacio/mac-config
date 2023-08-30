@@ -1,8 +1,9 @@
 #!/bin/bash
 
-echo "$(sysctl -n sysctl.proc_translated)"
+CPU="$(sysctl -n machdep.cpu.brand_string | grep Intel)"
 
-if [[ "$(sysctl -n sysctl.proc_translated)" == "sysctl: unknown oid 'sysctl.proc_translated'" ]]; then
+echo $CPU
+if [[ $CPU == *"Intel"* ]]; then
   echo "intel"
 else
   echo "M1"

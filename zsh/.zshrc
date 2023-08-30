@@ -16,7 +16,18 @@ export EDITOR=vim
 
 # This next line enables spaceship theme
 # if using it, disable the ZSH_THEME line above
-source "/opt/homebrew/opt/spaceship/spaceship.zsh"
+
+CPU="$(sysctl -n machdep.cpu.brand_string | grep Intel)"
+
+echo $CPU
+if [[ $CPU == *"Intel"* ]]; then
+    echo "Intel"
+    source "/usr/local/opt/spaceship/spaceship.zsh"
+else
+    echo "M1"
+    source "/opt/homebrew/opt/spaceship/spaceship.zsh"
+fi
+
 source "$HOME/.spaceship.zsh"
 
 # Set list of themes to pick from when loading at random
