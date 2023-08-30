@@ -25,4 +25,4 @@ undo = checkout --
 autocrlf = false
 pager = cat
 [push]
-	autoSetupRemote = true
+autoSetupRemote = true
