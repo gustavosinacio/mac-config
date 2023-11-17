@@ -33,7 +33,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-export PATH=/opt/homebrew/Cellar/ruby/3.2.1/bin/:$PATH
+export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
@@ -54,3 +54,6 @@ missing=""
 [ -f $HOME/.local-commands ] && PATH="$HOME/.local-commands:$PATH" && found="$found ✅ local-commands\n" || missing="$missing ❌ local-commands"
 
 export customFiles=$found$missing
+
+# BREW =======================================================================
+eval "$(/opt/homebrew/bin/brew shellenv)"

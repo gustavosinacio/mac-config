@@ -1,9 +1,4 @@
 #!/bin/bash
 
 # Install min ruby version for pods
-rbenv install 2.7.8
-
-# Use installed version
-rbenv global 2.7.8
-
-sudo gem install cocoapods
+brew install cocoapods
