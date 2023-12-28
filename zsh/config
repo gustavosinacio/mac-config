@@ -5,6 +5,9 @@ CONFIG_FOLDER_NAME="zsh"
 
 . $MAC_CONFIG_HOME/general-config $CONFIG_FOLDER_NAME $CONFIG_FILE_NAME
 
+# Install ZSH
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # Install zsh-autosuggestions
 # From: https://github.com/zsh-users/zsh-autosuggestions
 # Configuration: https://github.com/zsh-users/zsh-autosuggestions#configuration

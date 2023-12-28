@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Install min ruby version for pods
+brew install cocoapods

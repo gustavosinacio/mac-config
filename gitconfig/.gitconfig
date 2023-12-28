@@ -13,6 +13,7 @@ sr = reset --soft HEAD~1
 st = status
 sf = show --name-only
 fa = fetch --all --prune --jobs=10
+cp = cherry-pick
 
 lg = log -n 20 --pretty=format:'%C(red)• %h%C(reset) %C(green)<%an>%C(reset) %s %C(bold)%C(blue)♦ %cr%Creset'
 lgp = log -n 20 --pretty=format:'%C(red)• %h%C(reset) %C(green)<%an>%C(reset) %s %C(bold)%C(blue)♦ %cr%Creset%C(yellow)%d%Creset'
@@ -24,3 +25,7 @@ undo = checkout --
 
 [core]
 autocrlf = false
+pager = cat
+
+[push]
+autoSetupRemote = true
