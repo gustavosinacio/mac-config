@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Files, finder ----------------------------------------------------------------
-alias ls='exa'
+# alias ls='exa'
 alias ll='exa --long --header --git --icons'
 alias la='exa --long --header --git --icons --all'
 
@@ -14,7 +14,8 @@ alias ghcpr="GH_FORCE_TTY=100% gh pr list | fzf --preview 'GH_FORCE_TTY=100% gh 
 alias intel="/usr/bin/arch -x86_64 /bin/zsh"
 alias arm="/usr/bin/arch -arm64 /bin/zsh"
 alias ipod='/usr/local/bin/pod'
-alias ibrew='arch -x86_64 /usr/local/bin/brew'
+# alias ibrew='arch -x86_64 /usr/local/bin/brew'
+alias ibrew='arch -x86_64 /usr/local/opt/brew/bin/brew'
 alias mbrew='arch -arm64 /opt/homebrew/bin/brew'
 
 alias testnode="node -e \"console.log(process.arch)\""
