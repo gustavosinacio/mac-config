@@ -34,6 +34,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+# export PATH=~/Library/Mobile\ Documents/com\~apple\~CloudDocs/testground.py
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"

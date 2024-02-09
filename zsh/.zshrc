@@ -100,8 +100,8 @@ plugins=(
     zsh-completions
 )
 
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffe135,bg=#222"
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#fa33ac,bg=#222,bold,underline"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffe135,bg=#222,bold"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -152,3 +152,12 @@ eval "$(rbenv init - zsh)"
 export LDFLAGS="-L/usr/local/opt/node@16/lib"
 export CPPFLAGS="-I/usr/local/opt/node@16/include"
 export PATH="/usr/local/opt/node@16/bin:$PATH"
+
+# set Java home
+export "JAVA_HOME=\$(/usr/libexec/java_home)"
+
+if [ -f ./.nvmrc ]; then
+    nvm use
+else
+    echo " ❌ nvmrc"
+fi
