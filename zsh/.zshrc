@@ -154,7 +154,7 @@ export CPPFLAGS="-I/usr/local/opt/node@16/include"
 export PATH="/usr/local/opt/node@16/bin:$PATH"
 
 # set Java home
-export "JAVA_HOME=\$(/usr/libexec/java_home)"
+export "JAVA_HOME=$(/usr/libexec/java_home)"
 
 if [ -f ./.nvmrc ]; then
     nvm use
