@@ -1,9 +1,6 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export EDITOR=vim
+export EDITOR=nvim
 
 # ------------------------------------------------------------------------------
 # THEME CONFIG -----------------------------------------------------------------
@@ -154,11 +151,11 @@ export CPPFLAGS="-I/usr/local/opt/node@16/include"
 export PATH="/usr/local/opt/node@16/bin:$PATH"
 
 # set Java home
-export "JAVA_HOME=$(/usr/libexec/java_home -v 17)"
-# export "JAVA_HOME=$(/usr/libexec/java_home -v 11)"
+# export "JAVA_HOME=$(/usr/libexec/java_home -v 17)"
+export "JAVA_HOME=$(/usr/libexec/java_home -v 11)"
 
 if [ -f ./.nvmrc ]; then
     nvm use
 else
-    echo " ❌ nvmrc"
+    # echo " ❌ nvmrc"
 fi

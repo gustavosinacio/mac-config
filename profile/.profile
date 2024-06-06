@@ -21,7 +21,6 @@ fi
 export git=$HOME/github
 export GIT=$HOME/github
 export MAC_CONFIG_HOME=$HOME/mac-config
-export XBAR_PLUGINS="$HOME/Library/Application Support/xbar/plugins/"
 
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator

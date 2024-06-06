@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Files, finder ----------------------------------------------------------------
-# alias ls='exa'
-alias ll='exa --long --header --git --icons'
-alias la='exa --long --header --git --icons --all'
+alias ls='lsd'
+alias ll='lsd -l'
+alias la='lsd -la' 
 
 alias weather='curl -4 wttr.in/brasilia'
 
@@ -37,3 +37,5 @@ alias dcuf="docker-compose up --force-recreate"
 
 # Watchman ----
 alias watchman-res= "watchman watch-del $(pwd); watchman watch-project $(pwd)"
+
+alias vim='nvim'
