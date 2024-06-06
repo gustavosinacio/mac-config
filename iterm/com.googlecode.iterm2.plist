@@ -341,15 +341,21 @@ Clear Buffer</string>
 			<true/>
 			<key>Background Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>0.062745098039215685</real>
+				<key>Color Space</key>
+				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.062745098039215685</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.062745098039215685</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string></string>
+			<string>/Users/gustavoinacio/Downloads/technicolor-wallpaper-7680x4320.jpg</string>
+			<key>Background Image Mode</key>
+			<integer>2</integer>
 			<key>Badge Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -373,14 +379,16 @@ Clear Buffer</string>
 			<real>10</real>
 			<key>Badge Top Margin</key>
 			<real>10</real>
+			<key>Blend</key>
+			<real>0.04553668478260868</real>
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
-			<true/>
+			<false/>
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>10</real>
+			<real>25.092802526595744</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -442,7 +450,7 @@ Clear Buffer</string>
 				<real>1</real>
 			</dict>
 			<key>Cursor Type</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
@@ -457,12 +465,16 @@ Clear Buffer</string>
 			<false/>
 			<key>Foreground Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.73333334922790527</real>
+				<real>0.7928466796875</real>
+				<key>Color Space</key>
+				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.73333334922790527</real>
+				<real>0.79284673929214478</real>
 				<key>Red Component</key>
-				<real>0.73333334922790527</real>
+				<real>0.7928466796875</real>
 			</dict>
 			<key>Guid</key>
 			<string>FC244426-86FF-4B10-B91E-6DA6303081B4</string>
@@ -476,6 +488,8 @@ Clear Buffer</string>
 			<integer>0</integer>
 			<key>Initial Text</key>
 			<string></string>
+			<key>Initial Use Transparency</key>
+			<false/>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -842,7 +856,7 @@ Clear Buffer</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>FiraCode-Retina 13</string>
+			<string>HackNFM-Regular 13</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -1057,7 +1071,7 @@ Clear Buffer</string>
 			<key>Title Components</key>
 			<integer>66</integer>
 			<key>Transparency</key>
-			<real>0.15425033244680852</real>
+			<real>0.0</real>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -1075,7 +1089,7 @@ Clear Buffer</string>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>Working Directory</key>
 			<string>/Users/gustavo.inacio</string>
 		</dict>
@@ -2070,11 +2084,11 @@ Clear Buffer</string>
 	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.5043014259708738</real>
+	<real>0.52430142597087381</real>
 	<key>StatusBarPosition</key>
 	<integer>0</integer>
 	<key>TabStyleWithAutomaticOption</key>
